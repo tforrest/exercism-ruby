@@ -1,9 +1,10 @@
+# Raindrops sings you a sing
 class Raindrops
-  def self.convert (num)
+  def self.convert(num)
     res = ''
-    res << 'Pling' if num % 3 == 0
-    res << 'Plang' if num % 5 == 0
-    res << 'Plong' if num % 7 == 0
+    res << 'Pling' if (num % 3).zero?
+    res << 'Plang' if (num % 5).zero?
+    res << 'Plong' if (num % 7).zero?
     res << num.to_s if res.empty?
     res
   end

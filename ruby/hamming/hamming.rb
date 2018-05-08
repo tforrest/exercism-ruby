@@ -1,5 +1,6 @@
+# Hamming computes the hamming distance between two dna strings
 class Hamming
-	def self.compute (dna_one, dna_two)
+	def self.compute(dna_one, dna_two)
 		if dna_one.length != dna_two.length
 			raise ArgumentError
 		end 
