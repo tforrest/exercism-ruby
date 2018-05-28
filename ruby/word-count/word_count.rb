@@ -14,12 +14,13 @@ class Phrase
   end
 
   def parsed_phrase
-    @phrase.remove_invalid_characters.remove_single_quotes.split(' ')
+    parsed_phrase = @phrase.downcase
+    parsed_phrase.remove_invalid_characters.remove_single_quotes
   end
 
   def word_count
     counts = Hash.new(0)
-    parsed_phrase.map { |word| counts[word.downcase] += 1 }
+    parsed_phrase.split.map { |word| counts[word.downcase] += 1 }
     counts
   end
 end
