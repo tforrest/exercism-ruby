@@ -1,8 +1,11 @@
-class Grains 
+class Grains
+  BOARD_SIZE = 64
   def self.square(n)
-    raise ArgumentError if n < 1 || n > 64
+    raise ArgumentError if n < 1 || n > BOARD_SIZE
     square_helper(2, n - 1)
   end
+
+  private_class_method
 
   def self.square_helper(x, n)
     return 1 if n.zero?
